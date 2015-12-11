@@ -20,7 +20,7 @@ router.use(function (req, res, next) {
 });
 
 router.use(session({
-  secret: process.env.sessionSecret,
+  secret: require('../../secrets.json').sessionSecret,
   resave: false,
   saveUninitialized: false
 }));
